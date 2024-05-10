@@ -1,0 +1,63 @@
+# operations
+import sys
+def add(n1, n2):
+    return n1 + n2
+def multiply(n1, n2):
+    return n1 * n2
+def divide(n1, n2):
+    if n2 == 0:
+        return "Cant divide by Zero",
+    else:
+        return n1 / n2
+def subtract(n1, n2):
+    return n1 - n2
+choice = float(input('''
+        select operations, 
+        1: for add
+        2: for multiply
+        3: for divide
+        4:for subtract 
+        5:exit game: '''))
+if choice == 5:
+    print("Exiting Game !:")
+    sys.exit()
+
+# getting input
+n1 = float(input("enter 1st Number:"))
+n2 = float(input("enter 2nd Number:"))
+
+if choice == 1:
+    try1 = float(input("try to tell your answer !:  "))
+    if try1 == add(n1, n2):
+        print(f"Correct ! the answer is ;", add(n1, n2))
+    else:
+        print(f"No,You are wrong !, Correct ans is:", add(n1, n2))
+elif choice == 2:
+    try1 = float(input("try to tell your answer !:  "))
+    if try1 == multiply(n1, n2):
+        print(f"Correct ! the answer is ;", multiply(n1, n2))
+    else:
+        print(f"No,You are wrong !, Correct ans is:", multiply(n1, n2))
+elif choice == 3:
+    try1 = float(input("try to tell your answer !:  "))
+    if try1 == divide(n1, n2):
+        print(f"Correct ! the answer is ;", divide(n1, n2))
+    else:
+        print(f"No,You are wrong !, Correct ans is:", divide(n1, n2))
+elif choice == 4:
+    try1 = float(input("try to tell your answer !:  "))
+    if try1 == subtract(n1, n2):
+        print(f"Correct ! the answer is ;", subtract(n1, n2))
+    else:
+        print(f"No,You are wrong !, Correct ans is:", subtract(n1, n2))
+else:
+    print("Invalid Choice !")
+
+play_again = input('''Do you want to play again? 
+        Y for yes and N for No: ''')
+if play_again.lower() == 'N':
+    sys.exit()
+
+
+
+
